@@ -1,5 +1,4 @@
 // Problem 1304A
-
 #include <bits/stdc++.h>
 
 double mod(double a, double L){
@@ -21,27 +20,33 @@ int main(void){
 
 	for (int i=0; i < casos; i++){
 
-		double x=0,y=0;
-		double vel_x=0,vel_y=0;
-		double t=0;
-		double R=0;
+		int x=0,y=0;
+		int vel_x=0,vel_y=0;
+		int t=0;
+		int R=0;
 
-		double a=0,b=0;
+		int a=0,b=0;
 
 		cin >> x >> y >> vel_x >> vel_y;
 
 		a = y-x;
 		b= vel_x + vel_y;
 
+		if (b>a) {
+			cout << -1 << endl;
+			break;
+		}
+		
 		if (b>0) {
+
 			t =a/b;
-			R = mod(a,b);
-			if (R==0) cout << floor(t) << endl;
+			R = my_mod(a,b);
+			if (R<1) cout << t << endl;
     		else cout << -1 << endl;
 		}
-		else cout << -1 << endl;
-		
-	}
+
+	}//for			
+	
 
 	return 0;
 }
