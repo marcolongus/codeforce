@@ -1,4 +1,5 @@
 // Problem 1304A
+//renombrar
 #include <bits/stdc++.h>
 
 double mod(double a, double L){
